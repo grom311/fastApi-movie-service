@@ -1,5 +1,5 @@
 # app/api/db.py
-# DATABASE_URL = 'postgresql://postgres:12345@localhost/movie_db'
+DATABASE_URL = 'postgresql://postgres:12345@localhost/movie_db'
 
 import os
 
@@ -8,7 +8,7 @@ from sqlalchemy import (Column, DateTime, Integer, MetaData, String, Table,
 
 from databases import Database
 
-DATABASE_URL = os.getenv('DATABASE_URL')
+# DATABASE_URL = os.getenv('DATABASE_URL')
 
 engine = create_engine(DATABASE_URL)
 metadata = MetaData()
