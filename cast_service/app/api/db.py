@@ -5,11 +5,11 @@ from sqlalchemy import (Column, Integer, MetaData, String, Table,
 
 from databases import Database
 
-DATABASE_URL = 'postgresql://postgres:12345@localhost/movie_db'
+DATABASE_URI = 'postgresql://postgres:12345@localhost/movie_db'
 
 # DATABASE_URI = os.getenv('DATABASE_URI')
 
-engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URI)
 metadata = MetaData()
 
 casts = Table(
@@ -20,4 +20,4 @@ casts = Table(
     Column('nationality', String(20)),
 )
 
-database = Database(DATABASE_URL)
+database = Database(DATABASE_URI)
